@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
-    'feed', 
+    'feed',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'catfeedr.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
