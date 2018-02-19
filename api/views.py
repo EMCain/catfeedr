@@ -14,6 +14,7 @@ CATS = [
 
 def get_next_cat(request):
     index = request.session.get('index', 1)
+
     cat = CATS[index]
     data = {
         'name': cat[0],
@@ -24,6 +25,6 @@ def get_next_cat(request):
     index += 1
     if index > len(CATS):
         index = 1
-
     request.session['index'] = index
+
     return HttpResponse(json, content_type='application/json')
